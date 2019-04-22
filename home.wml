@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<wml>    
+  <card id="Home" title="Home">
+  <h1>Welcome To Main Page</h1>
+    <p>
+      <a href="add_product.wml">Add a Product</a><br/>
+      <a href="display_product.wml">Display Products</a><br/>
+	  <a href="search_product.wml">Search Products</a><br/>
+    </p>
+  </card>
+</wml>

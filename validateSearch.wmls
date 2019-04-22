@@ -1,0 +1,22 @@
+extern function validate()
+{
+  var form_product_name = String.trim(WMLBrowser.getVar("productName"));
+
+  if (""==form_product_name){
+    WMLBrowser.setVar("errorMsg", "The Product Name field must not be empty.");
+    WMLBrowser.refresh();
+    return;
+  }
+
+  submit_form(form_product_name);
+}
+
+
+function submit_form(form_product_name)
+{
+  WMLBrowser.setVar("errorMsg", "");
+
+  WMLBrowser.setVar("productName", form_product_name);
+
+  WMLBrowser.go("search.php");
+}

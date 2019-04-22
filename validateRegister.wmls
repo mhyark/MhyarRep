@@ -1,0 +1,40 @@
+extern function validate()
+{
+  var form_username = String.trim(WMLBrowser.getVar("UserName"));
+  var form_password = String.trim(WMLBrowser.getVar("Password"));
+  var form_tel = String.trim(WMLBrowser.getVar("Tel"));
+  
+    
+  if (""==form_username){
+    WMLBrowser.setVar("errorMsg", "The User Name field must not be empty.");
+    WMLBrowser.refresh();
+    return;
+  }
+
+  if (""==form_password){
+    WMLBrowser.setVar("errorMsg", "The Password field must not be empty.");
+    WMLBrowser.refresh();
+    return;
+  }
+  
+  if (""==form_tel){
+    WMLBrowser.setVar("errorMsg", "The Mobile Number field must not be empty.");
+    WMLBrowser.refresh();
+    return;
+  }
+ 
+
+  submit_form(form_username, form_password, form_tel);
+}
+
+
+function submit_form(form_username, form_password, form_tel)
+{
+  WMLBrowser.setVar("errorMsg", "");
+
+  WMLBrowser.setVar("UserName", form_username);
+  WMLBrowser.setVar("Password", form_password);
+  WMLBrowser.setVar("Tel", form_tel);
+
+  WMLBrowser.go("signup.php");
+}

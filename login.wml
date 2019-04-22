@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<wml>
+<head>
+    <style type="text/css">
+      h1,b {
+        color: white;
+        background-color: red;
+		text-align:center
+      }
+	  strong{
+		color:red;
+	  }
+    </style>
+ </head>
+  <card id="Login" title="Login">
+	<h1>Login Page</h1>
+	<b>$(errorMsg)</b><br/><br/>
+    <p>
+	  <a>UserName</a><br>
+	  <input type="text" name="UserName"><br/>
+	  <a>Password</a><br>
+	  <input type="Password" name="Password"><br/>
+	  <br/>
+	  <strong>Notice: Fields with * are required.</strong><br/><br/>
+	  <a href="validateLogin.wmls#validate()">Login</a>
+    </p>
+</wml>

@@ -1,0 +1,31 @@
+extern function validate()
+{
+  var form_username = String.trim(WMLBrowser.getVar("UserName"));
+  var form_password = String.trim(WMLBrowser.getVar("Password"));
+  
+
+  if (""==form_username){
+    WMLBrowser.setVar("errorMsg", "The User Name field must not be empty.");
+    WMLBrowser.refresh();
+    return;
+  }
+
+  if (""==form_password){
+    WMLBrowser.setVar("errorMsg", "The Password field must not be empty.");
+    WMLBrowser.refresh();
+    return;
+  }
+
+  submit_form(form_username, form_password);
+}
+
+
+function submit_form(form_username, form_password)
+{
+  WMLBrowser.setVar("errorMsg", "");
+
+  WMLBrowser.setVar("UserName", form_username);
+  WMLBrowser.setVar("Password", form_password);
+
+  WMLBrowser.go("login.php");
+}

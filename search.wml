@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<wml>
+<head>
+    <style type="text/css">
+      h1,b {
+        color: white;
+        background-color: red;
+		text-align:center
+      }
+	  strong{
+		color:red;
+	  }
+    </style>
+ </head>
+  <card id="search" title="Search">
+	<h1>Search Page</h1>
+	<b>$(errorMsg)</b><br/><br/>
+    <p>
+	  <a>Product Name  *</a><br>
+	  <input type="text" name="productName"><br/>
+	 <br/>
+	  <strong>Notice: Fields with * are required.</strong><br/><br/>
+	  <a href="validateSearch.wmls#validate()">Search</a>
+    </p>
+</wml>

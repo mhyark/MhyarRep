@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<wml>
+<head>
+    <style type="text/css">
+      h1,b {
+        color: white;
+        background-color: red;
+		text-align:center
+      }
+	  strong{
+		color:red;
+	  }
+    </style>
+ </head>
+</card>
+    <card id="Register" title="Register">
+	<h1>Register Page</h1>
+	<b>$(errorMsg)</b><br/><br/>
+    <p>
+	  <a>UserName  *</a><br>
+	  <input type="text" name="UserName"><br/>
+	  <a>Password  *</a><br>
+	  <input type="text" name="Password"><br/>
+	  <a>Mobile Number  *</a><br>
+	  <input type="text" name="Tel"><br/>
+	  <br/>
+	  <strong>Notice: Fields with * are required.</strong><br/><br/>
+	  <a href="validateRegister.wmls#validate()">Register</a>
+    </p>
+  </card>
+</wml>

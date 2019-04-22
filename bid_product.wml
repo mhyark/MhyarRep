@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<wml>
+     <card id="bew_bid" title="New Bid">
+	<h1>New Bid</h1>
+    <p>
+	  <a>Your Bid</a><br>
+	  <input type="text" name="yourBid"><br/>
+	  <do type="accept" label="Bid">
+		  <go href="bid_product.php" method="post">
+			  <postfield name="productName" value="$yourBid"/>
+		  </go>
+	  </do>
+    </p>
+  </card>
+  
+  
+</wml>

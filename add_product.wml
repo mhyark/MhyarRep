@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<wml>
+</card>
+    <card id="add_product" title="Add Product">
+	<h1>Add Product</h1>
+    <p>
+	  <a>Product Name</a><br>
+	  <input type="text" name="productName"><br/>
+	  <a>Initial Price</a><br>
+	  <input type="text" name="initialPrice"><br/>
+	  	  
+	  <do type="accept" label="Add Product">
+		  <go href="add_product.php" method="post">
+			  <postfield name="productName" value="$productName"/>
+			  <postfield name="initialPrice" value="$initialPrice"/>
+		  </go>
+	  </do>
+    </p>
+  </card>
+</wml>

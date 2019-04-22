@@ -1,0 +1,31 @@
+extern function validate()
+{
+  var form_product_name = String.trim(WMLBrowser.getVar("productName"));
+  var form_initial_price = String.trim(WMLBrowser.getVar("initialPrice"));
+  
+
+  if (""==form_product_name){
+    WMLBrowser.setVar("errorMsg", "The Product Name field must not be empty.");
+    WMLBrowser.refresh();
+    return;
+  }
+
+  if (""==form_initial_price){
+    WMLBrowser.setVar("errorMsg", "The Initial Price field must not be empty.");
+    WMLBrowser.refresh();
+    return;
+  }
+
+  submit_form(form_product_name, form_initial_price);
+}
+
+
+function submit_form(form_product_name, form_initial_price)
+{
+  WMLBrowser.setVar("errorMsg", "");
+
+  WMLBrowser.setVar("productName", form_product_name);
+  WMLBrowser.setVar("initialPrice", form_initial_price);
+
+  WMLBrowser.go("add_product.php");
+}

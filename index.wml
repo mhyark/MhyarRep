@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<wml>    
+  <card id="Index" title="Home">
+  <h1>Welcome To WeBid System</h1>
+    <p>
+      <a href="login.wml">Login</a><br/>
+      <a href="signup.wml">Signup</a><br/>
+    </p>
+  </card>
+</wml>
